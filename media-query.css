@@ -1,0 +1,69 @@
+/*telas menores @media (min-width: 600px)
+
+tablets @media (min-width: 768px)
+
+telas grandes (min-width: 1024px)*/
+
+@media screen and (min-width: 768px){
+    .text-main{
+        font-size: 1.5em;
+    }
+    .text-img h1{
+        font-size: 1.5em;
+        width: 80%;
+    }
+    .container{
+    background-color: var(--color3);
+    }
+    .container iframe{
+        width: 80%;
+        height: 50vh;
+        border: 5px;
+        padding: 40px;
+    }
+    .card-donate img{
+        width: 200px;
+        display: inline-block;
+    }
+    header{
+        background-image: linear-gradient(to bottom, #040d1b, #081a2a, #0b2638, #0f3347);
+    }
+}
+@media screen and (min-width:1024px){
+    header{
+        justify-content: space-between;
+        padding: 10px;
+    }
+    .container{
+        background-color: var(--color3);
+    }
+    .text-main br{
+        display: none;
+    }
+    .bar{
+        display: none;
+    }
+    .text-img h1{
+        font-size: 3em;
+        width: 80%;
+    }
+    .text-main h1{
+        font-size: 1.5em;
+    }
+    .main-img img{
+        height: 70vh;
+        filter: brightness(40%);
+    }
+    .ADB{
+        width: 70px;
+        height: 70px;
+    }
+    .ADB img{
+        width: 60px;
+        height: 60px;
+    }
+    .navbar{
+        display: block;
+    }
+
+}

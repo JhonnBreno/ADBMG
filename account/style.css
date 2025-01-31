@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 700;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+}
+.fundo img{
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    left: 0;
+    top: 0;
+}
+.home img{
+    cursor: pointer;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top:20px;
+    right: 20px;
+    border-radius: 50%;
+    filter: brightness(10);
+    transition: 0.7 ease-in-out;
+}
+a img:hover{
+    transform: scale(2);
+    transition: 1s;
+}
+main .card{
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.901);
+    width: 70vw;
+    max-width: 400px;
+    height: 420px;
+    border-radius: 7px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.293);
+}
+main, .card h1{
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    animation-name: appear;
+    animation-duration: 3s;
+}
+h1{
+    background-color: white;
+    margin-bottom: 10px;
+    border-radius: 7px;
+    padding: 7px;
+    text-align: center;
+}
+.inside{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    padding-left: 20px;
+    
+}
+.inside input{
+    border: none;
+    background-color: rgba(128, 128, 128, 0.123);
+    border-radius: 5px;
+    margin-top: 7px;
+    width: 95%;
+    outline: none;
+    padding: 7px;
+}
+#Congregação{
+    border-radius: 5px;
+    margin-top: 7px;
+    outline: none;
+    width: 95%;
+    border: none;
+    background-color: rgba(128, 128, 128, 0.123);
+    padding: 7px;
+}
+#Posição{
+    border-radius: 5px;
+    margin-top: 7px;
+    outline: none;
+    width: 95%;
+    border: none;
+    background-color: rgba(128, 128, 128, 0.123);
+    padding: 7px;
+}
+label{
+    margin-top: 7px;
+}
+#eye {
+    height: 100%;
+    justify-content: center;
+    color: black;
+}
+.close input #eye{
+    height: 30px;
+    display: flex;
+    padding-top: 10px;
+    width: 95%;
+    background-color: aquamarine;
+}
+#password{
+    width: 90%;
+}
+.card button{
+    text-transform: uppercase;
+    font-size: x-large;
+    color: white;
+    border: none;
+    background-color: rgba(0, 255, 0, 0.46);
+    margin-top: 20px;
+    padding: 10px;
+    width: 95%;
+    height: 50px;
+    border-radius: 7px;
+}
+.card button:hover{
+    transform: scale(1.04);
+    background-color: rgba(0, 95, 54, 0.795) ;
+    transition: 1s;
+}
+@keyframes appear{
+    from{
+        filter: blur(10vh);
+    }
+    to{
+        opacity: 1;
+    }
+}

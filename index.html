@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu" />
+    <link rel="stylesheet" href="media-query.css">
+    <link rel="shortcut icon" href="./imagens/ADBMG-favicon.png" type="image/x-icon">
+    <title>Church</title>
+</head>
+<body>
+    <header>
+        <div class="ADB">
+            <img src="./imagens/adb-logo.png" alt="adb ministerio da graça">
+        </div>
+        <div class="text-main">
+            <h1>Assembleia de Deus <br> Ministério da <span style="color: var(--color7); font-weight: bolder;">Graça</span></h1>
+        </div>
+        <div class="navbar">
+            <ul>
+                <li><a href="./biblia/biblia.html">Biblia</a></li>
+                <li><a href="#">Contato</a></li>
+                <li><a href="#">Locais</a></li>
+            </ul>
+        </div>
+        <div class="bar" id="bar">
+            <i class="material-symbols-outlined">menu</i>
+        </div>
+    </header>
+    <div class="sidebar hidden" id="sidebar">
+        <ul>
+            <li><a href="./biblia/biblia.html">Biblia</a></li>
+            <li><a href="#">Contato</a></li>
+            <li><a href="#">Locais</a></li>
+        </ul>
+    </div>
+    <main>
+        <div class="main-img">
+            <img src="./imagens/ceu-sm.jpg" alt="Céu" id="main-img">
+            <div class="text-img"><h1>Porque pela graça sois salvos, por meio da fé; e isso não vem de vós; é dom de Deus. Não vem das obras, para que ninguém se glorie.<span style="color: goldenrod; font-weight: bolder;"> Efésios 2:8-9</span></h1>
+            </div>
+        </div>
+    </main>
+    <br>
+    <div class="container">
+            <iframe src="https://www.youtube.com/embed/yQ4HSGGmloo?si=uzXfxV2tvXscJLKW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    <div class="contribua" >
+        <div class="donate hidden2" id="contribua">
+            <div class="card-donate">
+                <h3>Contribua e ajude nosso projeto</h3>
+                <img src="./imagens/JTr.gif" alt="hearth">
+                <p>Ao contribuir todo dinheiro será enviado para o projeto Neemias</p>
+                <div class="qrcode">
+                <img src="./imagens/qrcode.jpg" alt="qrcode">
+            </div>
+                <button><a href="#">Contribuir</a></button>
+            </div>
+        </div>
+    </div>
+    <div class="btn-donate" id="btn-donate">
+        <button>Clique e Contribua</button>
+    </div>
+    <div class="container-members">
+        <div class="new-members">
+            <img src="./imagens/members-img.jpg" alt="prayer">
+            <h3>Sou novo na fé?</h3>
+            <p>Leia um e-book para lhe ajudar na caminhada</p>
+            <button>LER</button>
+        </div>
+
+        <div class="spouse">
+            <img src="./imagens/members-img.jpg" alt="prayer">
+            <h3>Problemas com o casamento</h3>
+            <p>Leia um e-book para lhe ajudar na caminhada</p>
+            <button>LER</button>
+        </div>
+</div>
+<div class="biblia" id="biblia">
+    <iframe src="https://www.bibliaonline.com.br/acf/livros" frameborder="0"></iframe>
+</div>
+    <script src="interation.js"></script>
+</body>
+</html>
