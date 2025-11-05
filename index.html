@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="pt-BR">
+    <head>
+        <title>ADBMG</title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="media.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"crossorigin="anonymous"/>
+        <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" async></script>
+        <script src="api.js" async></script>
+        <script async>emailjs.init({publicKey: "VjzMnQb4reUmn0m4z"});</script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css">
+        <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js" defer></script>
+        <link rel="shortcut icon" href="./imagens/favicon.png" type="image/x-icon">
+        <meta name="description" content="Site oficial da Assembleia de Deus no Brasil Ministério da graça. Conheça nossa missão, horários de culto e mensagens edificantes." />
+
+    </head>
+    <body>
+        <script src="//code.tidio.co/nicpzlxi70kiau1ob4syxnmdbskh7dsg.js" async></script>
+        <script src="https://elfsightcdn.com/platform.js" async></script>
+        <div class="elfsight-app-21305066-6050-48ca-8c22-6e5fae28afba" data-elfsight-app-lazy></div>
+
+        <div class="loading" id="loading">
+            <div class="bouncing"></div>
+            <div class="bouncing"></div>
+            <div class="bouncing"></div>
+        </div>
+        
+        <header>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col header">
+                        <div class="logo profile-icon" id="profileIcon" style="cursor: pointer;">
+                            <img src="./imagens/adblogo.webp" alt="Perfil" id="profileAvatar">
+                        </div>
+                        <div class="nav">
+                            <ul>
+                                <li><a href="#eventos">Eventos</a></li>
+                                <li><a href="https://play.google.com/store/apps/details?id=br.biblia&pcampaignid=web_share">Perfil</a></li>
+                                <li><a href="./home/profile.html">Youtube</a></li>
+                            </ul>
+                        </div>
+                        <div class="search" id="search">
+                                <input type="text" placeholder="Pesquisar Locais" id="search-input">
+                                <button type="submit"><i class="bi bi-search" id="btn-search"></i></button>
+                        
+                                <div class="search-list hidden" id ="search-list">
+                                    <ul>
+                                        <li><a href="https://maps.app.goo.gl/tZ581xoHc73GD7px8" target="_blank">Sede Quixeramobim</a><img src="./imagens/sede.png"alt="imagem" class="imagem-list"></li>
+                                        <li><a href="https://maps.app.goo.gl/vFez9nYv5GTeGY9W7" target="_blank">Sede Morada Nova</a><img src="./imagens/three.jpg" alt="imagem"></li>
+                                        <li><a href="https://maps.app.goo.gl/VxeZNqoa5bzDWuzy5" target="_blank">Sede Quixadá</a><img src="./imagens/three.jpg" alt="imagem"></li>
+                                        <li><a href="#" target="_blank">Sede Russas</a><img src="./imagens/three.jpg" alt="imagem"></li>
+                                        <li><a href="https://maps.app.goo.gl/FRVVf6t7C4cGjvp67" target="_blank">Sede Limoeiro do Norte</a><img src="./imagens/three.jpg" alt="imagem"></li>
+                                    </ul>
+                                </div>
+                        </div>
+                        <div class="login-status" id="loginStatus">
+                            <i class="bi bi-person-fill"></i>
+
+                        </div>
+                        <div class="bar" id="bar">
+                            <i class="bi bi-list"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="sidebar hidden" id="sidebar">
+            <ul>
+                <li><a href="#eventos" style = "color: darkblue;">Eventos</a></li>
+                <li><a href="./home/profile.html">Perfil</a></li>
+                <li><a href="https://youtube.com/@assembleiadedeusnobrasil-m3846?si=fqK3sEot0go4xc3-" style="color: red;">Youtube</a></li>
+            </ul>
+    </div>
+        <main>
+            <div class="adbmg-text">
+                <p>Assembleia de Deus Ministério da <span style="color: goldenrod;"><strong>Graça</strong></span></p>
+            </div>
+            <div id="carouselId" class="carousel slide" data-bs-ride="carousel">
+                
+                <div class="carousel-inner" role="listbox">
+                    <div class="container-radio">
+                        <img src="./imagens/loading.png" loading="lazy" id="bird" alt="Loading">
+                        <audio src="https://stm25.xcast.com.br:8356/stream?1739473003019" id="audio"></audio>
+                        <i class="bi bi-play-fill" id="btn"></i>
+                        <h1>ADBMG</h1>
+                    </div>
+                    <div class="container-imagem">
+                        
+                    <div class="imagem-main">
+                        <img src="./imagens/slide2.webp" class="w-100 d-block" alt="Third slide"/>
+                        <div class="carousel-caption" loading="lazy">
+                            <h3>Hebreus 11:1</h3>
+                            <p>Ora, a fé é o firme fundamento das coisas que se esperam, e a prova das coisas que não se veem.</p>
+                        </div>
+                    </div>
+                </div>
+        </main>
+        <div class="container-fluid p-4 lessons" >
+            <div class="row d-flex">
+                <h1><u>Lições</u></h1>
+                    <div class="col-12 col-md-6 col-lg-3 mb-3">
+                    <div class="card-body h-100 p-3 d-flex flex-column justify-content-center align-items-center">
+                        <i class="bi bi-heart-fill"></i><h2>Amar a Deus</h2>
+                <ul>
+                    <li>"Porque Deus amou o mundo" (João 3:16)</li>
+                    <li>Expressa o amor de Deus pela humanidade, mostrando que Ele enviou Seu único Filho para morrer por nós.</li>
+                </ul>
+            </div>
+                    </div>
+                    
+                <div class="col-12 col-md-6 col-lg-3 mb-3 ">
+                    <div class="card-body h-100 p-3 d-flex flex-column justify-content-center align-items-center">
+                        
+                        <i class="bi bi-bookmark-fill"></i><h2>Humildade</h2>
+                    <ul>
+                        <li>Jesus mesmo sendo Rei. Ele ensinou: "Quem quiser ser o maior entre vocês, seja servo" (Mateus 23:11).</li>
+                        <li>A humildade é reconhecer que tudo vem de Deus.</li>
+                    </ul>
+                    </div>
+                </div>
+                
+                <div class="col-12 col-md-6 col-lg-3 mb-3 ">
+                    <div class="card-body h-100 p-3 d-flex flex-column justify-content-center align-items-center">
+                        <i class="bi bi-book-fill"></i><h2>Sabedoria da Palavra</h2>
+                    <ul>
+                        <li>Ler e meditar nas Escrituras ajuda a tomar decisões sábias e eficazes.</li>
+                        <li>"Lâmpada para os meus pés é a tua palavra, e luz para o meu caminho" (Salmos 119:105).</li>
+                    </ul>
+                    </div>
+                </div>
+            <div class="col-12 col-md-6 col-lg-3 mb-3 ">
+                <div class="card-body h-100 p-3 d-flex flex-column justify-content-center align-items-center">
+                    <i class="bi bi-chat-right-fill"></i><h2>Confiança em Deus</h2>
+                <ul>
+                    <li>Entregar as preocupações e confiar no plano divino.</li>
+                    <li>"Confia no Senhor de todo coração e não te apoies no teu próprio entendimento" (Provérbios 3:5).</li>
+                </ul>
+            </div>
+        </div>
+        </div>
+        </div>
+        <div class="container-fluid p-5 donates">
+            <div class="row d-flex">
+                <h1>Dizimos e ofertas</h1>
+                <div class="col-12 col-sm-6">
+                    <img src="./imagens/dizimos.webp" alt="imagem">
+                    <label for="dizimos">Dízimos</label>
+                    <p>Os dízimos são feitos através da chave aleatória, copie e cole no seu App bancário</p>
+                    <select name="dizimos" id="dizimos" onchange="copiarMensagem(this)">
+                        <option value="" disabled selected>Selecione uma cidade</option>
+                        <option value="em manutenção">Morada Nova</option>
+                        <option value="em manutenção">limoeiro do norte</option>
+                        <option value="em manutenção">Russas</option>
+                    </select>
+                </div>
+                <div class="col-12 col-sm-6">
+                    <div class="col-12 ">
+                    <img src="./imagens/ofertas.webp" alt="imagem">
+                    <label for="ofertas">Ofertas</label>
+                    <p>As ofertas são feitas através da chave aleatória, copie e cole no seu App bancário</p>
+                    <select name="ofertas" id="ofertas" onchange="copiarMensagem(this)">
+                        <option value="" disabled selected>Selecione uma cidade</option>
+                        <option value="em manutenção">Morada Nova</option>
+                        <option value="em manutenção">limoeiro do norte</option>
+                        <option value="em manutenção">Russas</option>
+                    </select>
+                </div>
+                </div>
+            
+        </div>
+        </div>
+                    
+            <div class="container-fluid flex-column pb-5 pt-5 fundo">
+                <h2>E-Books</h2>
+                <div class="row d-flex g-3">
+                    <div class="col-12 col-md-4">
+                        <div class="card h-100 elemento">
+                            <img src="./imagens/fundobiblia.webp" alt="biblia" loading="lazy">
+                            <div class="card-body">
+                            <h3>Biblia</h3>
+                            <p class="card-text">Meditar nas Escrituras diariamente promove o crescimento espiritual e uma vida de oração mais profunda</p>
+                            <a href="./imagens/biblia.pdf"><button>mais</button></a>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4 ">
+                        <div class="card h-100 elemento">
+                            <img src="./imagens/members-img.webp" alt="oração" loading="lazy">
+                            <div class="card-body">
+                                <h3>Oração</h3>
+                                <p class="card-text">Jesus frequentemente orava, mostrando a importância dessa prática em momentos de alegria e dificuldade.</p>
+                                <a href="./imagens/oração.pdf"><button>mais</button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="card h-100 elemento">
+                            <img src="./imagens/jejum.webp" alt="jejum" loading="lazy">
+                            <div class="card-body">
+                                <h3>Jejum</h3>
+                                <p class="card-text">O jejum envolve abrir mão de algo, geralmente alimentos, para dedicar mais tempo e atenção a Deus.</p>
+                                <a href="./imagens/jejum.pdf"><button>mais</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
+                    <!-- Container principal -->
+<div class="container-fluid p-5 container-peace">
+
+  <!-- Três colunas de destaque -->
+  <div class="row text-center d-flex align-items-center justify-content-center pastores">
+    <div class="col-lg-4">
+        <img src="./imagens/adblogo.jpg" alt="Imagem 1" class="img-fluid">
+      <h2 class="fw-normal">Pastor Jecriston</h2>
+      <p>Descrição breve sobre o conteúdo 1.</p>
+      <a class="btn btn-secondary" href="#">Ver mais »</a>
+    </div>
+    <div class="col-lg-4">
+        <img src="./imagens/pastor-carneiro.webp" alt="Imagem 1" class="img-fluid">
+      <h2 class="fw-normal">Pastor Carneiro</h2>
+      <p>Descrição breve sobre o conteúdo 2.</p>
+      <a class="btn btn-info" href="#">Ver mais »</a>
+    </div>
+    <div class="col-lg-4">
+        <img src="./imagens/adblogo.jpg" alt="Imagem 1" class="img-fluid">
+      <h2 class="fw-normal">Pastor Benedito</h2>
+      <p>Descrição breve sobre o conteúdo 3.</p>
+      <a class="btn btn-secondary" href="#">Ver mais »</a>
+    </div>
+  </div>
+
+  <hr class="my-5">
+
+  <!-- Featurette (imagem + texto lado a lado) -->
+  <div class="row featurette peace">
+    <div class="col-md-7">
+      <h2 class="featurette-heading">A Oferta que Tocou o Céu</h2>
+      <p class="lead">Jesus observava os ricos depositarem grandes quantias no templo, mas foi a humilde viúva, ao doar suas duas únicas moedas, que chamou Sua atenção. Ele disse: "Em verdade vos digo que esta pobre viúva deu mais do que todos os outros; porque todos deram do que lhes sobrava, mas ela, da sua pobreza, deu tudo o que possuía para viver." — Marcos 12:43-44
+
+Essa cena revela que Deus não mede o valor da oferta pela quantidade, mas pela entrega do coração. A viúva não deu o que lhe sobrava — ela deu tudo. Sua fé e generosidade silenciosa ecoam como um exemplo eterno de confiança e devoção.</p>
+    </div>
+    <div class="col-md-5">
+      <img src="./imagens/viuva.webp" class="img-fluid" alt="Imagem ilustrativa">
+    </div>
+  </div>
+
+  <hr class="my-5">
+
+  <div class="row featurette peace">
+    <div class="col-md-7 order-md-2">
+      <h2 class="featurette-heading">A Travessia do Mar Vermelho</h2>
+      <p class="lead">O povo de Israel está encurralado. De um lado, o mar imenso e impassável. Do outro, o exército de Faraó se aproximando com carros de guerra, lanças e gritos. O vento começa a soprar forte. Moisés, com o cajado erguido, clama a Deus. E então — como se a própria natureza obedecesse — o mar se abre em duas muralhas de água, revelando um caminho seco no meio.
+
+As famílias atravessam com pressa, olhando para os muros de água ao lado, sentindo o chão firme sob os pés. Quando o último israelita cruza, os egípcios tentam seguir — mas as águas voltam com força, engolindo os perseguidores.
+
+Esse momento é mais do que uma fuga: é um símbolo de libertação, de confiança no impossível, e da fidelidade de Deus em cumprir Suas promessas.</p>
+    </div>
+    <div class="col-md-5 order-md-1">
+      <img src="./imagens/mar.webp" class="img-fluid" alt="Imagem ilustrativa">
+    </div>
+  </div>
+
+
+<hr class="my-5">
+  <!-- Featurette (imagem + texto lado a lado) -->
+  <div class="row featurette peace">
+    <div class="col-md-7">
+      <h2 class="featurette-heading">Daniel na cova dos leões</h2>
+      <p class="lead">Imagine Daniel, um homem íntegro e fiel a Deus, sendo lançado numa cova cheia de leões famintos por causa de sua oração. A cova é escura, úmida, e o rugido dos leões ecoa pelas paredes de pedra. Mas Daniel está calmo. Ele se ajoelha, os olhos fechados, confiando plenamente em Deus.
+
+Durante a noite, os leões se aproximam... mas não atacam. Eles se deitam ao redor dele, como se uma paz invisível tivesse descido sobre o lugar. Um anjo enviado por Deus está ali, invisível aos olhos humanos, mas presente — fechando a boca dos leões.
+
+Ao amanhecer, o rei corre até a cova e grita: "Daniel, servo do Deus vivo, pôde o teu Deus, a quem tu continuamente serves, livrar-te dos leões?" E Daniel responde, vivo e ileso, provando que a fé verdadeira é mais forte que qualquer ameaça.</p>
+    </div>
+    <div class="col-md-5">
+      <img src="./imagens/daniel.webp" class="img-fluid" alt="Imagem ilustrativa">
+    </div>
+  </div>
+
+<hr class="my-5">
+
+  <div class="row featurette peace">
+    <div class="col-md-7 order-md-2">
+      <h2 class="featurette-heading">A Quarta Vigília da Noite</h2>
+      <p class="lead">Depois de alimentar a multidão com os cinco pães e dois peixes, Jesus despediu o povo e subiu ao monte para orar sozinho. Enquanto isso, os discípulos estavam no barco, lutando contra o vento e as ondas. Foi nesse momento, ainda escuro, que Jesus apareceu caminhando sobre as águas. Eles ficaram assustados, achando que era um fantasma, mas Ele disse:
+
+“Coragem! Sou eu. Não tenham medo!” — Mateus 14:27
+
+Esse detalhe torna a cena ainda mais impressionante: escuridão, tempestade, medo — e então, Jesus surge com paz e autoridade sobre o caos.</p>
+    </div>
+    <div class="col-md-5 order-md-1">
+      <img src="./imagens/sobre-as-aguas.webp" class="img-fluid" alt="Imagem ilustrativa">
+    </div>
+  </div>
+  <hr class="my-5">
+</div>
+</div>
+
+<div class="eventos" id="eventos"></div>
+            <!-- Elfsight Event Calendar | Untitled Event Calendar -->
+<script src="https://elfsightcdn.com/platform.js" async></script>
+<div class="elfsight-app-e54d7147-16fa-4eaf-a8f0-3d1869d82f55" data-elfsight-app-lazy></div>
+
+<!-- Elfsight Google Reviews | Untitled Google Reviews -->
+<script src="https://elfsightcdn.com/platform.js" async></script>
+<div class="elfsight-app-7e604f21-d05b-4c3b-92a3-b9fe5f2bac25" data-elfsight-app-lazy></div>
+            <div class="maps"><h1>Igreja Sede</h1><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3974.8158568001822!2d-39.01055819999998!3d-4.970253499999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7be9fbf6fdb063d%3A0x28f491f630369744!2sIgreja%20Evangelica%20Assembleia%20de%20Deus%20No%20Brasil!5e0!3m2!1spt-BR!2sbr!4v1758503494974!5m2!1spt-BR!2sbr" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+        <footer>
+            <div class="row final">
+                <div class="col d-flex align-items-center flex-column utilities">
+                    <h1>Links Úteis</h1>
+                    <ul>
+                        <li><a href="#eventos">Eventos</a></li>
+                        <li><a href="./sobre/artigo.html">Sobre</a></li>
+                        <li><a href="#">Contatos</a></li>
+                        <li><a href="#search" id="locais">Locais</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-12 d-flex align-items-center text-final ">
+                    <h1>Assembléia de Deus no Brasil Ministério da Graça</h1>
+                    <p>Nós temos como objetivo distribuir o reino dos céus através da palavra do Senhor a toda a criatura trazendo as boas novas de Jesus Cristo</p>
+
+                <form onsubmit="this.reset()" class="more" id="formulario">
+                    <h1>Contato</h1>
+                    <input type="email" placeholder="Digite seu Email" id="email" required>
+                    <textarea name="message" id="message" placeholder="digite sua MENSAGEM..." required></textarea>
+                    <button type="button" onclick="sendMail(event)">Enviar</button>
+                </form>
+            </div>
+            </div>
+            <div class="col footer-bottom">
+                <p>&copy; 2025 Assembleia de Deus Ministério da Graça. Todos os direitos reservados.</p>
+            </div>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous" async></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous" async></script>
+
+        <!-- Modal de Login -->
+        <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="loginModalLabel">Acesso Restrito</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Você precisa estar logado para acessar esta área.</p>
+                        <a href="./home/login.html" class="btn btn-success">Fazer Login</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+      
+        <!-- Firebase SDKs (necessário para logout e perfil) -->
+        <script src="https://www.gstatic.com/firebasejs/12.5.0/firebase-app-compat.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/12.5.0/firebase-auth-compat.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/12.5.0/firebase-firestore-compat.js"></script>
+        
+        <script src="script.js"></script>
+        <script src="interatividade.js"></script>
+        <script>
+            window.addEventListener('load', () => {
+                if (window.AOS?.init) {
+                    AOS.init({ once: true, duration: 600, easing: 'ease-out-cubic', throttleDelay: 120 });
+                }
+            });
+        </script>
+</body>
+
+        

@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.background{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle, #00f7ff9e, cadetblue, darkcyan);
+    padding: 20px;
+}
+.card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    flex-direction: column;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    gap: 15px;
+}
+.card button{
+    background-color: cadetblue;
+    width: 100%;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: .5s;
+    margin-top: 10px;
+}
+.card button:hover{
+    background-color: #3c7c8e;
+}
+.card input,
+.card select{
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    outline: none;
+}
+.card select{
+    cursor: pointer;
+}
+.card form h3{
+    margin-top: 15px;
+    margin-bottom: 8px;
+    color: #077A7D;
+    font-size: 16px;
+    text-align: left;
+    border-bottom: 2px solid #077A7D;
+    padding-bottom: 5px;
+}
+.card form label{
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+    display: block;
+}
+.card form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+.card img{
+    width: 70px;
+    height: auto;
+    align-self: center;
+    margin-bottom: 10px;
+    border-radius: 100%;
+    border: solid 3px goldenrod;
+}
+.loginConteudo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    gap: 5px;
+    text-align: center;
+}
+.loginConteudo p{
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+    display: block;
+}
+.loginConteudo a{
+    text-decoration: none;
+    color: #077A7D;
+}
+.google button{
+    background-color: #db4437;
+    width: 100%;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: .5s;
+}
+@keyframes circle {
+    0% {
+        transform: translate(1);
+    }
+    100% {
+        transform: translate(50px, 50px);
+    }
+}

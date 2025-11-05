@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="register.css">
+    <title>Cadastro</title>
+</head>
+<body>
+    <div class="background">
+        <div class="card" id="box">
+            <img src="../imagens/adbmg-logo.png" alt="imagem">
+            <h2>Cadastre-se</h2>
+            <form id="registerForm">
+                <input type="email" id="email" placeholder="Email" required />
+                <input type="password" id="password" placeholder="Senha (mínimo 6 caracteres)" required />
+                <input type="password" id="confirmPassword" placeholder="Confirme a senha" required />
+                <button type="submit">Criar conta</button>
+            </form>
+            <p>Já tem uma conta? <a href="login.html">Entrar</a></p>
+        </div>
+    </div>
+
+    <!-- Firebase compat SDKs -->
+    <script src="https://www.gstatic.com/firebasejs/12.5.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/12.5.0/firebase-auth-compat.js"></script>
+    <script src="register.js"></script>
+</body>
+</html>

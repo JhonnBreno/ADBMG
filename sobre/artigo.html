@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="pt-BR">
+    <head>
+        <title>Mais Sobre</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8"/>
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <!-- Bootstrap CSS v5.2.1 -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+            crossorigin="anonymous"/>
+    </head>
+
+    <body>
+        <style>
+    p{
+        text-indent: 20px;
+    }
+    ul{
+        list-style: inside;
+    }
+    .card{
+        border-top: 5px solid green;
+        border-radius: 0px 0px 20px 20px;
+        padding: 30px;
+    }
+    .container-toggle {
+    position: absolute;
+    width: 40px;
+    height: 20px;
+    background-color: green;
+    right: 0;
+    z-index: 2;
+    border-bottom-left-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+}
+
+/* Esconde o input padrão */
+input {
+    opacity: 0;
+    position: absolute;
+    width: 0;
+    height: 0;
+}
+
+/* Estiliza o botão */
+.switch {
+    position: relative;
+    width: 30px;
+    height: 15px;
+    background-color: black;
+    border-radius: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: 1s;
+}
+.switch:focus{
+    background-color: white;
+}
+/* Círculo interno */
+.switch::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    bottom: 3px;
+    left: 3px;
+    border-radius: 50%;
+    transition: 0.4s;
+}
+
+/* Quando o input estiver marcado, move o círculo */
+input:checked + .switch::before {
+    transform: translateX(15px);
+}
+
+        </style>
+        <header>
+            <!-- place navbar here -->
+        </header>
+        <main>
+            <div class="container-toggle">
+    <label>
+        <input type="checkbox">
+        <span class="switch active"></span>
+    </label>
+</div>
+
+            <div class="container mt-3 mb-5">
+                <div
+                    class="row">
+                    <div class="col card">
+                        <h3>Bem-vindo ao site da Assembleia de Deus - Ministério da Graça</h3>
+                            <p>Nosso site foi criado com o propósito de ser um farol de luz e esperança para todos os que buscam crescer espiritualmente e fortalecer sua comunhão com Deus. Aqui você encontrará um espaço acolhedor onde a Palavra de Deus é a base e guia para a vida cristã, um lugar de reflexão, aprendizado e conexão com uma comunidade de fé.</p>
+                            
+                            <h3>Sobre nós</h3>
+                            <p>A Assembleia de Deus - Ministério da Graça é uma igreja comprometida com os ensinamentos de Jesus Cristo e com a missão de levar o evangelho a todas as pessoas. Nosso objetivo principal é compartilhar a mensagem de salvação e transformação espiritual, ajudando cada indivíduo a encontrar um propósito maior em Deus. Somos uma igreja aberta a todos que desejam caminhar com Cristo, independentemente de sua história, idade ou trajetória.</p>
+                            
+                            <h3>O que você encontra aqui?</h3>
+                            <p>Nosso site é um recurso completo para membros da igreja, visitantes e todos aqueles que procuram conhecer mais sobre nossa missão. Entre os conteúdos disponíveis, você encontrará:</p>
+                            <ul>
+                                <li>Mensagens e Estudo Bíblico: Reflexões baseadas na Bíblia para fortalecer sua fé e aplicar os princípios cristãos em sua vida diária.</li>
+                                <li>Agenda de Eventos: Fique por dentro dos cultos, conferências, encontros e projetos especiais que realizamos ao longo do ano.</li>
+                                <li>Projetos Sociais: Conheça as iniciativas de impacto social desenvolvidas por nossa igreja para apoiar comunidades carentes e promover o bem-estar coletivo.</li>
+                                <li>Galeria de Testemunhos: Histórias de pessoas que tiveram suas vidas transformadas pelo poder de Deus.</li>
+                                <li>Recursos para a Família: Materiais de apoio para casais, jovens, crianças e grupos familiares, ajudando cada membro a crescer espiritualmente.</li>
+                            </ul>
+                            <h2>Nossa missão e visão</h2>
+                            <p>para glorificar a Deus, pregar o evangelho da graça e capacitar seus membros a viverem uma vida de santidade e amor. Nosso compromisso é não apenas ensinar a Palavra, mas também praticá-la por meio do serviço ao próximo, promovendo a fé e a esperança em todas as áreas da vida.Cremos que a igreja deve ser um lugar de acolhimento e transformação, onde cada pessoa encontra um propósito renovado e a oportunidade de conhecer o plano perfeito de Deus para sua vida.</p>
+                            
+                            <h2>Participe conosco</h2>
+                            <p>Queremos que este site seja um elo entre você e nossa comunidade. Independentemente de onde você esteja, convidamos você a participar de nossos cultos, eventos online e atividades presenciais. Este é um espaço preparado para que você cresça espiritualmente e encontre respostas para os desafios da vida por meio da Palavra de Deus.</p>                         
+                            
+                            <h2>Contatos</h2>
+                            <ul>
+                                <li><a href="">Instagram</a></li>
+                                <li><a href="">Facebook</a></li>
+                                <li><a href="">Whatsapp</a></li>
+                            </ul>
+                    </div>
+                </div>
+                
+                
+            </div>
+        </main>
+        <footer>
+            <!-- place footer here -->
+        </footer>
+        <!-- Bootstrap JavaScript Libraries -->
+         <script>
+    const toggle = document.querySelector('.switch'); // Seleciona o primeiro elemento com a classe 'switch'
+    const todos = document.querySelectorAll("*:not(.switch, .container-toggle, label )");
+    
+            toggle.addEventListener('click', ()=>{
+                if(toggle.classList.contains("active")){
+                todos.forEach(element => {
+            element.style.setProperty("background-color", "black", "important");
+            element.style.setProperty("color", "white", "important");
+            toggle.classList.remove("active")
+            element.style.setProperty("transition", "0.3s", "important");
+        });
+            }else{
+            todos.forEach(element => {
+            element.style.setProperty("background-color", "white", "important");
+            toggle.classList.add("active")
+            element.style.setProperty("color", "black", "important");
+            element.style.setProperty("transition", "0.5s", "important");
+        });
+            }
+        })
+            
+         </script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+            crossorigin="anonymous"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" rossorigin="anonymous"></script>
+    </body>
+</html>

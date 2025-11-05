@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Meu Perfil - ADBMG</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <div class="background">
+        <div class="card profile-form">
+            <img src="../imagens/adbmg-logo.png" alt="ADBMG Logo">
+            <h2>Meu Perfil</h2>
+            <form id="profileForm">
+                <h3>Informações Pessoais</h3>
+                <input type="text" id="nomeCompleto" placeholder="Nome Completo" required />
+                <input type="text" id="cpf" placeholder="CPF (000.000.000-00)" maxlength="14" required />
+                <input type="text" id="rg" placeholder="RG" required />
+                <input type="date" id="nascimento" placeholder="Data de Nascimento" required />
+                
+                <h3>Filiação</h3>
+                <input type="text" id="nomePai" placeholder="Nome do Pai" required />
+                <input type="text" id="nomeMae" placeholder="Nome da Mãe" required />
+                
+                <h3>Informações Eclesiásticas</h3>
+                <select id="funcao" required>
+                    <option value="" disabled selected>Selecione sua função</option>
+                    <option value="Membro">Membro</option>
+                    <option value="Diácono">Diácono</option>
+                    <option value="Diaconisa">Diaconisa</option>
+                    <option value="Presbítero">Presbítero</option>
+                    <option value="Pastor">Pastor</option>
+                    <option value="Evangelista">Evangelista</option>
+                    <option value="Missionário">Missionário</option>
+                    <option value="Missionária">Missionária</option>
+                    <option value="Cooperador">Cooperador</option>
+                </select>
+                
+                <div>
+                    <label for="batizado" style="display: block; margin-bottom: 5px; color: #333;">É batizado?</label>
+                    <select id="batizado" required onchange="toggleDataBatismo()">
+                        <option value="" disabled selected>Selecione</option>
+                        <option value="sim">Sim</option>
+                        <option value="nao">Não batizado</option>
+                    </select>
+                    <input type="date" id="dataBatismo" placeholder="Data de Batismo" style="display: none; margin-top: 10px;" />
+                </div>
+                
+                <input type="text" id="congregacao" placeholder="Congregação" required />
+                
+                <button type="submit">Salvar Perfil</button>
+            </form>
+            <p><a href="../index.html">Voltar ao site</a></p>
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/12.5.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/12.5.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/12.5.0/firebase-firestore-compat.js"></script>
+    <script src="profile.js"></script>
+    <script>
+        function toggleDataBatismo() {
+            const batizado = document.getElementById('batizado').value;
+            const dataBatismo = document.getElementById('dataBatismo');
+            if (batizado === 'sim') {
+                dataBatismo.style.display = 'block';
+                dataBatismo.required = true;
+            } else {
+                dataBatismo.style.display = 'none';
+                dataBatismo.required = false;
+                dataBatismo.value = '';
+            }
+        }
+        
+        // Máscara para CPF
+        document.getElementById('cpf').addEventListener('input', function(e) {
+            let value = e.target.value.replace(/\D/g, '');
+            if (value.length <= 11) {
+                value = value.replace(/(\d{3})(\d)/, '$1.$2');
+                value = value.replace(/(\d{3})(\d)/, '$1.$2');
+                value = value.replace(/(\d{3})(\d{1,2})$/, '$1-$2');
+                e.target.value = value;
+            }
+        });
+    </script>
+</body>
+</html>

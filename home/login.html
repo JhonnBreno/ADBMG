@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Login</title>
+</head>
+<body>
+    <div class="background">
+        <div class="card">
+            <div class="loginConteudo">
+                <img src="../imagens/adbmg-logo.png" alt="imagem">
+                <h2>Login</h2>
+                <form id="loginForm">
+                    <input type="email" id="email" placeholder="Email" required />
+                    <input type="password" id="password" placeholder="Senha" required />
+                    <button type="submit">Entrar</button>
+                </form>
+                <div class="google">
+                    <button id="googleSignIn">Entrar com Google <i class="fab fa-google"></i></button>
+                </div>
+                <p>não tem uma conta? <a href="register.html">Cadastre-se</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+    
+    <!-- App scripts -->
+    <script src="login.js"></script>
+
+    <!-- Loading indicator -->
+    <div id="loading" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+        Carregando...
+    </div>
+</body>
+</html>
