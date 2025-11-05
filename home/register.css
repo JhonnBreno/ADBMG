@@ -9,8 +9,8 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    padding: 20px;
+    width: 100%;
+    height: 100vh;
 }
 .background{
     position: absolute;
@@ -18,7 +18,8 @@ body{
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 100%;
+    height: 100vh;
+    min-height: 100dvh;
     background-image: radial-gradient(circle, #00f7ff9e, cadetblue, darkcyan);
 }
 .card{
@@ -102,6 +103,10 @@ body{
     cursor: pointer;
     font-size: 16px;
     transition: .5s;
+}
+.card p a{
+    text-decoration: none;
+    color: #077A7D;
 }
 card {
     opacity: 0;
