@@ -132,3 +132,38 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+  const inputFoto = document.getElementById('foto');
+  const previewDiv = document.getElementById('previewFoto');
+
+  inputFoto.addEventListener('change', function () {
+    const file = this.files[0];
+    if (file) {
+      const reader = new FileReader();
+
+      reader.onload = function () {
+        const img = document.createElement('.containerImg img');
+        img.src = reader.result;
+        img.alt = "Foto de perfil";
+        img.style.maxWidth = "100px";
+        img.style.borderRadius = "50%";
+        img.style.marginTop = "10px";
+        img.style.objectFit = "cover";
+        img.style.maxHeight = "100px";
+        img.style.minHeight = "100px";
+        img.style.minWidth = "100px";
+        img.style.width = "100%";
+        img.style.height = "100%";
+        img.style.objectFit = "cover";
+        img.style.objectPosition = "center";
+        img.style.objectFit = "cover";
+        img.style.alignSelf = "center";
+        containerImg.style.display
+
+        previewDiv.innerHTML = ""; // limpa antes de adicionar nova imagem
+        previewDiv.appendChild(img);
+      };
+
+      reader.readAsDataURL(file);
+    }
+  });
