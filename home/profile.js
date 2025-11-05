@@ -142,7 +142,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const reader = new FileReader();
 
       reader.onload = function () {
-        const img = document.createElement('.containerImg img');
+        const img = document.createElement('img');
         img.src = reader.result;
         img.alt = "Foto de perfil";
         img.style.maxWidth = "100px";
@@ -158,7 +158,7 @@ document.addEventListener('DOMContentLoaded', () => {
         img.style.objectPosition = "center";
         img.style.objectFit = "cover";
         img.style.alignSelf = "center";
-        containerImg.style.display
+        
 
         previewDiv.innerHTML = ""; // limpa antes de adicionar nova imagem
         previewDiv.appendChild(img);
