@@ -17,7 +17,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: radial-gradient(circle, red);
+    background-image: radial-gradient(circle, #00f7ff9e, cadetblue, darkcyan);
     padding: 20px;
 }
 .card{
