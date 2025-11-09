@@ -1,20 +1,22 @@
-// Configuração do Firebase
+// Importações Firebase Modular SDK
+import { initializeApp } from "https://www.gstatic.com/firebasejs/12.5.0/firebase-app.js";
+import { getAuth, signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/12.5.0/firebase-auth.js";
+
+// Configuração do Firebase (usar a mesma de profile.js para consistência)
 const firebaseConfig = {
-    apiKey: "AIzaSyBVBAp4XInsO3uWxeCyhMXwgyZc8wG7R5A",
-    authDomain: "adbmg-a0618.firebaseapp.com",
-    projectId: "adbmg-a0618",
-    storageBucket: "adbmg-a0618.firebasestorage.app",
-    messagingSenderId: "966966845858",
-    appId: "1:966966845858:web:85d3f4e0a3f953649c92fb",
-    measurementId: "G-DXT8S3VMK7"
+  apiKey: "AIzaSyBzt_7wGwrB_mpkR6A7nLGgMo7rcae6zOI",
+  authDomain: "adbmg-a0618.firebaseapp.com",
+  projectId: "adbmg-a0618",
+  databaseURL: "https://adbmg-a0618-default-rtdb.firebaseio.com/",
+  storageBucket: "adbmg-a0618.firebasestorage.app",
+  messagingSenderId: "966966845858",
+  appId: "1:966966845858:web:c320d349ed5e27949c92fb",
+  measurementId: "G-H9VN98KLCC"
 };
 
-// Inicializa o Firebase (se já não estiver inicializado)
-try {
-    if (!firebase.apps || !firebase.apps.length) firebase.initializeApp(firebaseConfig);
-} catch (e) {
-    console.error('Erro ao inicializar Firebase:', e);
-}
+// Inicializa Firebase
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
 
 document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('loginForm');
@@ -35,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             try {
-                const userCredential = await firebase.auth().signInWithEmailAndPassword(email, password);
+                const userCredential = await signInWithEmailAndPassword(auth, email, password);
                 
                 // Salvar informações no localStorage
                 localStorage.setItem('userLoggedIn', 'true');
@@ -70,9 +72,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (googleBtn) {
         googleBtn.addEventListener('click', async () => {
-            const provider = new firebase.auth.GoogleAuthProvider();
+            const provider = new GoogleAuthProvider();
             try {
-                const result = await firebase.auth().signInWithPopup(provider);
+                const result = await signInWithPopup(auth, provider);
                 
                 // Salvar informações no localStorage
                 localStorage.setItem('userLoggedIn', 'true');
@@ -89,7 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Monitora o estado de autenticação
-    firebase.auth().onAuthStateChanged((user) => {
+    onAuthStateChanged(auth, (user) => {
         // Verificar se houve logout manual recentemente
         const manualLogout = localStorage.getItem('manualLogout');
         const logoutTimestamp = localStorage.getItem('logoutTimestamp');
@@ -116,7 +118,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const currentLoggedIn = localStorage.getItem('userLoggedIn');
             if (currentLoggedIn === 'false' && manualLogout === 'true') {
                 // Se fez logout manual, fazer signOut do Firebase também
-                firebase.auth().signOut().catch(() => {});
+                signOut(auth).catch(() => {});
                 return;
             }
             

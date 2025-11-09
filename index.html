@@ -6,16 +6,13 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="media.css">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"crossorigin="anonymous"/>
         <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" async></script>
-        <script src="api.js" async></script>
         <script async>emailjs.init({publicKey: "VjzMnQb4reUmn0m4z"});</script>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css">
         <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js" defer></script>
         <link rel="shortcut icon" href="./imagens/favicon.png" type="image/x-icon">
         <meta name="description" content="Site oficial da Assembleia de Deus no Brasil Ministério da graça. Conheça nossa missão, horários de culto e mensagens edificantes." />
-
     </head>
     <body>
         <script src="//code.tidio.co/nicpzlxi70kiau1ob4syxnmdbskh7dsg.js" async></script>
@@ -27,19 +24,35 @@
             <div class="bouncing"></div>
             <div class="bouncing"></div>
         </div>
-        
+        <div id="cookie-banner" class="cookie-banner">
+            <p>Usamos cookies para melhorar sua experiência. Ao continuar navegando, você concorda com nossa <a href="./sobre/artigo.html">política de privacidade</a>.</p>
+            <button id="aceitar-cookies">Aceitar</button>
+          </div>
+          
         <header>
             <div class="container-fluid">
                 <div class="row">
                     <div class="col header">
+                        <div class="sidebar sidebarOff" id="sidebar">
+                            
+                            <ul>
+                                <li><a href="#eventos">Eventos</a></li>
+                                <li><a href="./home/profile.html">Perfil</a></li>
+                                <li><a href="./painel/index.html">Painel</a></li>
+                                <li><a href="https://youtube.com/@assembleiadedeusnobrasil-m3846?si=fqK3sEot0go4xc3-">Youtube</a></li>
+                            </ul>
+                            <div class="header-style" id="closeHeaderStyle">&times;</div>
+                            <img src="./imagens/slide.webp" alt="">
+                    </div>
                         <div class="logo profile-icon" id="profileIcon" style="cursor: pointer;">
                             <img src="./imagens/adblogo.webp" alt="Perfil" id="profileAvatar">
                         </div>
                         <div class="nav">
                             <ul>
                                 <li><a href="#eventos">Eventos</a></li>
-                                <li><a href="https://play.google.com/store/apps/details?id=br.biblia&pcampaignid=web_share">Perfil</a></li>
-                                <li><a href="./home/profile.html">Youtube</a></li>
+                                <li><a href="./home/profile.html">Perfil</a></li>
+                                <li><a href="./painel/index.html">Painel</a></li>
+                                <li><a href="">Youtube</a></li>
                             </ul>
                         </div>
                         <div class="search" id="search">
@@ -48,7 +61,7 @@
                         
                                 <div class="search-list hidden" id ="search-list">
                                     <ul>
-                                        <li><a href="https://maps.app.goo.gl/tZ581xoHc73GD7px8" target="_blank">Sede Quixeramobim</a><img src="./imagens/sede.png"alt="imagem" class="imagem-list"></li>
+                                        <li><a href="https://maps.app.goo.gl/tZ581xoHc73GD7px8" target="_blank">Sede Quixeramobim</a><img src="./imagens/sede.webp"alt="imagem" class="imagem-list"></li>
                                         <li><a href="https://maps.app.goo.gl/vFez9nYv5GTeGY9W7" target="_blank">Sede Morada Nova</a><img src="./imagens/three.jpg" alt="imagem"></li>
                                         <li><a href="https://maps.app.goo.gl/VxeZNqoa5bzDWuzy5" target="_blank">Sede Quixadá</a><img src="./imagens/three.jpg" alt="imagem"></li>
                                         <li><a href="#" target="_blank">Sede Russas</a><img src="./imagens/three.jpg" alt="imagem"></li>
@@ -58,7 +71,7 @@
                         </div>
                         <div class="login-status" id="loginStatus">
                             <i class="bi bi-person-fill"></i>
-
+                            <span id="loginText"></span>
                         </div>
                         <div class="bar" id="bar">
                             <i class="bi bi-list"></i>
@@ -67,13 +80,8 @@
                 </div>
             </div>
         </header>
-        <div class="sidebar hidden" id="sidebar">
-            <ul>
-                <li><a href="#eventos" style = "color: darkblue;">Eventos</a></li>
-                <li><a href="./home/profile.html">Perfil</a></li>
-                <li><a href="https://youtube.com/@assembleiadedeusnobrasil-m3846?si=fqK3sEot0go4xc3-" style="color: red;">Youtube</a></li>
-            </ul>
-    </div>
+
+        
         <main>
             <div class="adbmg-text">
                 <p>Assembleia de Deus Ministério da <span style="color: goldenrod;"><strong>Graça</strong></span></p>
@@ -110,7 +118,6 @@
                 </ul>
             </div>
                     </div>
-                    
                 <div class="col-12 col-md-6 col-lg-3 mb-3 ">
                     <div class="card-body h-100 p-3 d-flex flex-column justify-content-center align-items-center">
                         
@@ -142,35 +149,18 @@
         </div>
         </div>
         </div>
-        <div class="container-fluid p-5 donates">
-            <div class="row d-flex">
-                <h1>Dizimos e ofertas</h1>
-                <div class="col-12 col-sm-6">
-                    <img src="./imagens/dizimos.webp" alt="imagem">
-                    <label for="dizimos">Dízimos</label>
-                    <p>Os dízimos são feitos através da chave aleatória, copie e cole no seu App bancário</p>
-                    <select name="dizimos" id="dizimos" onchange="copiarMensagem(this)">
-                        <option value="" disabled selected>Selecione uma cidade</option>
-                        <option value="em manutenção">Morada Nova</option>
-                        <option value="em manutenção">limoeiro do norte</option>
-                        <option value="em manutenção">Russas</option>
-                    </select>
-                </div>
-                <div class="col-12 col-sm-6">
-                    <div class="col-12 ">
-                    <img src="./imagens/ofertas.webp" alt="imagem">
-                    <label for="ofertas">Ofertas</label>
-                    <p>As ofertas são feitas através da chave aleatória, copie e cole no seu App bancário</p>
-                    <select name="ofertas" id="ofertas" onchange="copiarMensagem(this)">
-                        <option value="" disabled selected>Selecione uma cidade</option>
-                        <option value="em manutenção">Morada Nova</option>
-                        <option value="em manutenção">limoeiro do norte</option>
-                        <option value="em manutenção">Russas</option>
-                    </select>
-                </div>
-                </div>
-            
-        </div>
+        
+
+        <div class="container-fluid pt-5 pb-5 admin">
+            <div class="row adminText">
+                <h1>Administração</h1>
+                <i class="  bi-globe"> Espaço Restrito</i>
+                <h3>Área dedicada para administradores</h3>
+                <form action="./home/profile.html">
+                    <input type="password" name="inputProfile" id="inputProfile" placeholder="Senha de Administrador">
+                    <input type="submit" id="btnProfile" value="Entrar">
+                </form>
+            </div>
         </div>
                     
             <div class="container-fluid flex-column pb-5 pt-5 fundo">
@@ -208,99 +198,8 @@
                     </div>
                 </div>
             </div>
-            
-
-                    <!-- Container principal -->
-<div class="container-fluid p-5 container-peace">
-
-  <!-- Três colunas de destaque -->
-  <div class="row text-center d-flex align-items-center justify-content-center pastores">
-    <div class="col-lg-4">
-        <img src="./imagens/adblogo.jpg" alt="Imagem 1" class="img-fluid">
-      <h2 class="fw-normal">Pastor Jecriston</h2>
-      <p>Descrição breve sobre o conteúdo 1.</p>
-      <a class="btn btn-secondary" href="#">Ver mais »</a>
-    </div>
-    <div class="col-lg-4">
-        <img src="./imagens/pastor-carneiro.webp" alt="Imagem 1" class="img-fluid">
-      <h2 class="fw-normal">Pastor Carneiro</h2>
-      <p>Descrição breve sobre o conteúdo 2.</p>
-      <a class="btn btn-info" href="#">Ver mais »</a>
-    </div>
-    <div class="col-lg-4">
-        <img src="./imagens/adblogo.jpg" alt="Imagem 1" class="img-fluid">
-      <h2 class="fw-normal">Pastor Benedito</h2>
-      <p>Descrição breve sobre o conteúdo 3.</p>
-      <a class="btn btn-secondary" href="#">Ver mais »</a>
-    </div>
-  </div>
-
-  <hr class="my-5">
-
-  <!-- Featurette (imagem + texto lado a lado) -->
-  <div class="row featurette peace">
-    <div class="col-md-7">
-      <h2 class="featurette-heading">A Oferta que Tocou o Céu</h2>
-      <p class="lead">Jesus observava os ricos depositarem grandes quantias no templo, mas foi a humilde viúva, ao doar suas duas únicas moedas, que chamou Sua atenção. Ele disse: "Em verdade vos digo que esta pobre viúva deu mais do que todos os outros; porque todos deram do que lhes sobrava, mas ela, da sua pobreza, deu tudo o que possuía para viver." — Marcos 12:43-44
-
-Essa cena revela que Deus não mede o valor da oferta pela quantidade, mas pela entrega do coração. A viúva não deu o que lhe sobrava — ela deu tudo. Sua fé e generosidade silenciosa ecoam como um exemplo eterno de confiança e devoção.</p>
-    </div>
-    <div class="col-md-5">
-      <img src="./imagens/viuva.webp" class="img-fluid" alt="Imagem ilustrativa">
-    </div>
-  </div>
-
-  <hr class="my-5">
-
-  <div class="row featurette peace">
-    <div class="col-md-7 order-md-2">
-      <h2 class="featurette-heading">A Travessia do Mar Vermelho</h2>
-      <p class="lead">O povo de Israel está encurralado. De um lado, o mar imenso e impassável. Do outro, o exército de Faraó se aproximando com carros de guerra, lanças e gritos. O vento começa a soprar forte. Moisés, com o cajado erguido, clama a Deus. E então — como se a própria natureza obedecesse — o mar se abre em duas muralhas de água, revelando um caminho seco no meio.
-
-As famílias atravessam com pressa, olhando para os muros de água ao lado, sentindo o chão firme sob os pés. Quando o último israelita cruza, os egípcios tentam seguir — mas as águas voltam com força, engolindo os perseguidores.
-
-Esse momento é mais do que uma fuga: é um símbolo de libertação, de confiança no impossível, e da fidelidade de Deus em cumprir Suas promessas.</p>
-    </div>
-    <div class="col-md-5 order-md-1">
-      <img src="./imagens/mar.webp" class="img-fluid" alt="Imagem ilustrativa">
-    </div>
-  </div>
 
 
-<hr class="my-5">
-  <!-- Featurette (imagem + texto lado a lado) -->
-  <div class="row featurette peace">
-    <div class="col-md-7">
-      <h2 class="featurette-heading">Daniel na cova dos leões</h2>
-      <p class="lead">Imagine Daniel, um homem íntegro e fiel a Deus, sendo lançado numa cova cheia de leões famintos por causa de sua oração. A cova é escura, úmida, e o rugido dos leões ecoa pelas paredes de pedra. Mas Daniel está calmo. Ele se ajoelha, os olhos fechados, confiando plenamente em Deus.
-
-Durante a noite, os leões se aproximam... mas não atacam. Eles se deitam ao redor dele, como se uma paz invisível tivesse descido sobre o lugar. Um anjo enviado por Deus está ali, invisível aos olhos humanos, mas presente — fechando a boca dos leões.
-
-Ao amanhecer, o rei corre até a cova e grita: "Daniel, servo do Deus vivo, pôde o teu Deus, a quem tu continuamente serves, livrar-te dos leões?" E Daniel responde, vivo e ileso, provando que a fé verdadeira é mais forte que qualquer ameaça.</p>
-    </div>
-    <div class="col-md-5">
-      <img src="./imagens/daniel.webp" class="img-fluid" alt="Imagem ilustrativa">
-    </div>
-  </div>
-
-<hr class="my-5">
-
-  <div class="row featurette peace">
-    <div class="col-md-7 order-md-2">
-      <h2 class="featurette-heading">A Quarta Vigília da Noite</h2>
-      <p class="lead">Depois de alimentar a multidão com os cinco pães e dois peixes, Jesus despediu o povo e subiu ao monte para orar sozinho. Enquanto isso, os discípulos estavam no barco, lutando contra o vento e as ondas. Foi nesse momento, ainda escuro, que Jesus apareceu caminhando sobre as águas. Eles ficaram assustados, achando que era um fantasma, mas Ele disse:
-
-“Coragem! Sou eu. Não tenham medo!” — Mateus 14:27
-
-Esse detalhe torna a cena ainda mais impressionante: escuridão, tempestade, medo — e então, Jesus surge com paz e autoridade sobre o caos.</p>
-    </div>
-    <div class="col-md-5 order-md-1">
-      <img src="./imagens/sobre-as-aguas.webp" class="img-fluid" alt="Imagem ilustrativa">
-    </div>
-  </div>
-  <hr class="my-5">
-</div>
-</div>
 
 <div class="eventos" id="eventos"></div>
             <!-- Elfsight Event Calendar | Untitled Event Calendar -->
@@ -358,13 +257,9 @@ Esse detalhe torna a cena ainda mais impressionante: escuridão, tempestade, med
             </div>
         </div>
 
-      
         <!-- Firebase SDKs (necessário para logout e perfil) -->
-        <script src="https://www.gstatic.com/firebasejs/12.5.0/firebase-app-compat.js" async></script>
-        <script src="https://www.gstatic.com/firebasejs/12.5.0/firebase-auth-compat.js" async></script>
-        <script src="https://www.gstatic.com/firebasejs/12.5.0/firebase-firestore-compat.js" async></script>
         
-        <script src="script.js" async></script>
+        <script src="script.js" type="module" async></script>
         <script src="interatividade.js"></script>
         <script>
             window.addEventListener('load', () => {

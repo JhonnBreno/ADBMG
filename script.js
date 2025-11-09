@@ -1,13 +1,22 @@
+// Importações Firebase Modular SDK
+import { initializeApp } from "https://www.gstatic.com/firebasejs/12.5.0/firebase-app.js";
+import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/12.5.0/firebase-auth.js";
 
-if (typeof firebase !== 'undefined') {
-    try {
-        if (!firebase.apps.length) {
-            firebase.initializeApp(firebaseConfig);
-        }
-    } catch (e) {
-        console.error('Erro ao inicializar Firebase:', e);
-    }
-}
+// Configuração do Firebase (usar a mesma de profile.js para consistência)
+const firebaseConfig = {
+  apiKey: "AIzaSyBzt_7wGwrB_mpkR6A7nLGgMo7rcae6zOI",
+  authDomain: "adbmg-a0618.firebaseapp.com",
+  projectId: "adbmg-a0618",
+  databaseURL: "https://adbmg-a0618-default-rtdb.firebaseio.com/", // Adicionar databaseURL para Realtime Database
+  storageBucket: "adbmg-a0618.firebasestorage.app",
+  messagingSenderId: "966966845858",
+  appId: "1:966966845858:web:c320d349ed5e27949c92fb",
+  measurementId: "G-H9VN98KLCC"
+};
+
+// Inicializa Firebase
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
 
 // Função para verificar se o usuário está logado
 function isUserLoggedIn() {
@@ -69,14 +78,8 @@ async function logout() {
         // Aguardar um pouco para garantir que o listener detecte a mudança
         await new Promise(resolve => setTimeout(resolve, 100));
         
-        // Fazer signOut do Firebase se estiver disponível
-        if (typeof firebase !== 'undefined' && firebase.auth) {
-            try {
-                await firebase.auth().signOut();
-            } catch (firebaseError) {
-                // Erro silencioso
-            }
-        }   
+        // Fazer signOut do Firebase
+        await signOut(auth);
         
         // Resetar flag após um tempo para permitir login futuro
         setTimeout(() => {
@@ -120,7 +123,19 @@ async function logout() {
     });
 
     // Atualizar o status de login inicial
-    updateLoginStatus();
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        localStorage.setItem('userLoggedIn', 'true');
+        localStorage.setItem('userName', user.displayName || user.email);
+      } else {
+        if (!window.isLoggingOut && localStorage.getItem('manualLogout') !== 'true') {
+          localStorage.setItem('userLoggedIn', 'false');
+          localStorage.removeItem('userName');
+          localStorage.removeItem('userEmail');
+        }
+      }
+      updateLoginStatus();
+    });
 
     // Se acabou de salvar o perfil, abrir sidebar automaticamente
     const profileSaved = localStorage.getItem('profileSaved');
@@ -145,5 +160,14 @@ async function logout() {
         }
     }
 
+    function lerCookie(nome) {
+        const cookies = document.cookie.split("; ");
+        for (let c of cookies) {
+          const [chave, valor] = c.split("=");
+          if (chave === nome) return valor;
+        }
+        return null;
+      }
+      
 
 

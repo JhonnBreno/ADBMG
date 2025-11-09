@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ofertas.css">
+    <title>Ofertas e Dizimos</title>
+</head>
+<body>
+    <div class="container-fluid p-5 donates">
+        <div class="row d-flex">
+            <h1>Dizimos e ofertas</h1>
+            <div class="col-12 col-sm-6">
+                <img src="./imagens/dizimos.webp" alt="imagem">
+                <label for="dizimos">Dízimos</label>
+                <p>Os dízimos são feitos através da chave aleatória, copie e cole no seu App bancário</p>
+                <select name="dizimos" id="dizimos" onchange="copiarMensagem(this)">
+                    <option value="" disabled selected>Selecione uma cidade</option>
+                    <option value="em manutenção">Morada Nova</option>
+                    <option value="em manutenção">limoeiro do norte</option>
+                    <option value="em manutenção">Russas</option>
+                </select>
+            </div>
+            <div class="col-12 col-sm-6">
+                <div class="col-12 ">
+                <img src="./imagens/ofertas.webp" alt="imagem">
+                <label for="ofertas">Ofertas</label>
+                <p>As ofertas são feitas através da chave aleatória, copie e cole no seu App bancário</p>
+                <select name="ofertas" id="ofertas" onchange="copiarMensagem(this)">
+                    <option value="" disabled selected>Selecione uma cidade</option>
+                    <option value="em manutenção">Morada Nova</option>
+                    <option value="em manutenção">limoeiro do norte</option>
+                    <option value="em manutenção">Russas</option>
+                </select>
+            </div>
+            </div>
+    </div>
+    </div>
+</body>
+</html>

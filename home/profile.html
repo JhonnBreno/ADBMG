@@ -3,20 +3,23 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Meu Perfil - ADBMG</title>
+    <titlePerfil - ADBMG</title>
     <link rel="stylesheet" href="profile.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="shortcut icon" href="../imagens/favicon-adbmg.png" type="image/x-icon">
+
 </head>
 <body>
+    <!-- Firebase compat SDKs -->
+<script src="profile.js" type="module"></script>
+
     <div class="background">
         <div class="card profile-form">
             <img src="../imagens/adbmg-logo.png" alt="ADBMG Logo">
-            <h2>Meu Perfil</h2>
+            <h2>Perfil</h2>
               
             <form id="profileForm">
                 <h3>Informações Pessoais</h3>
-                <div id="previewFoto" class="preview-foto"></div>
-                <input type="file" name="foto" id="foto" accept="image/*">
                 <input type="text" id="nomeCompleto" placeholder="Nome Completo" required />
                 <input type="text" id="cpf" placeholder="CPF (000.000.000-00)" maxlength="14" required />
                 <input type="text" id="rg" placeholder="RG" required />
@@ -51,6 +54,7 @@
                 </div>
                 
                 <input type="text" id="congregacao" placeholder="Congregação" required />
+                <input type="text" id="cidade" placeholder="Cidade" required />
                 
                 <button type="submit">Salvar Perfil</button>
             </form>
@@ -58,10 +62,6 @@
         </div>
     </div>
 
-    <script src="https://www.gstatic.com/firebasejs/12.5.0/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/12.5.0/firebase-auth-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/12.5.0/firebase-firestore-compat.js"></script>
-    <script src="profile.js"></script>
     <script>
         function toggleDataBatismo() {
             const batizado = document.getElementById('batizado').value;

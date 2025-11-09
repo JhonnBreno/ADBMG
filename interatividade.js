@@ -9,12 +9,18 @@ const bar = document.getElementById('bar')
 const sidebar = document.getElementById('sidebar')
 const searchList = document.getElementById('search-list')
 const btnSearch = document.getElementById('search')
+const btnHeader = document.getElementById('closeHeaderStyle')
 
 bar.addEventListener('click', ()=>{
-    if(sidebar.classList.contains('visible')){
-        sidebar.classList.replace('visible', 'hidden')
+    if(sidebar.classList.contains('sidebarOff')){
+        sidebar.classList.replace('sidebarOff', 'sidebarOn')
     }else{
-        sidebar.classList.replace('hidden', 'visible')
+        sidebar.classList.replace('sidebarOn', 'sidebarOff')
+    }
+})
+btnHeader.addEventListener('click', ()=> {
+    if(sidebar.classList.contains('sidebarOn')){
+        sidebar.classList.replace('sidebarOn', 'sidebarOff')
     }
 })
 
@@ -65,5 +71,19 @@ btnSearch.addEventListener('keydown', function (){
             search.style.setProperty("background-color", "white", "important");
         }, 2000);
     });
+
+  const banner = document.getElementById("cookie-banner");
+  const btn = document.getElementById("aceitar-cookies");
+
+  // Verifica se o cookie já foi aceito
+  if (document.cookie.includes("cookiesAceitos=true")) {
+    banner.style.display = "none";
+  }
+
+  btn.addEventListener("click", () => {
+    // Define o cookie com validade de 1 ano
+    document.cookie = "cookiesAceitos=true; max-age=" + 60 * 60 * 24 * 365 + "; path=/";
+    banner.style.display = "none";
+  });
 
 });

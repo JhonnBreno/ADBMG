@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel de Administração - ADBMG</title>
+    <link rel="stylesheet" href="../style.css"> <!-- Ajuste o caminho conforme necessário -->
+    <link rel="stylesheet" href="../home/profile.css"> <!-- Pode reutilizar o CSS de perfil para alguns estilos -->
+    <link rel="shortcut icon" href="../imagens/favicon-adbmg.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container-fluid p-5 fundo">
+        <h1 class="mb-4">Painel de Administração de Usuários</h1>
+
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" id="searchCongregacao" placeholder="Buscar por Congregação">
+            <select class="form-select" id="filterBatizado">
+                <option value="">Batizado</option>
+                <option value="sim">Sim</option>
+                <option value="nao">Não</option>
+            </select>
+            <button class="btn btn-primary" id="applyFilters">Aplicar</button>
+        </div>
+
+        <div id="userList" class="row users">
+            <!-- Dados dos usuários serão carregados aqui -->
+        </div>
+    </div>
+
+    <script src="script.js" type="module"></script>
+</body>
+</html>
