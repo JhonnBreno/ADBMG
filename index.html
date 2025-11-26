@@ -38,7 +38,6 @@
                             <ul>
                                 <li><a href="#eventos">Eventos</a></li>
                                 <li><a href="./home/profile.html">Perfil</a></li>
-                                <li><a href="./painel/index.html">Painel</a></li>
                                 <li><a href="https://youtube.com/@assembleiadedeusnobrasil-m3846?si=fqK3sEot0go4xc3-">Youtube</a></li>
                             </ul>
                             <div class="header-style" id="closeHeaderStyle">&times;</div>
@@ -51,28 +50,34 @@
                             <ul>
                                 <li><a href="#eventos">Eventos</a></li>
                                 <li><a href="./home/profile.html">Perfil</a></li>
-                                <li><a href="./painel/index.html">Painel</a></li>
                                 <li><a href="">Youtube</a></li>
                             </ul>
                         </div>
                         <div class="search" id="search">
                                 <input type="text" placeholder="Pesquisar Locais" id="search-input">
-                                <button type="submit"><i class="bi bi-search" id="btn-search"></i></button>
+                                <button type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                                  </svg id= "btn-search"></button>
                         
                                 <div class="search-list hidden" id ="search-list">
                                     <ul>
                                         <li><a href="https://maps.app.goo.gl/tZ581xoHc73GD7px8" target="_blank">Sede Quixeramobim</a><img src="./imagens/sede.webp"alt="imagem" class="imagem-list"></li>
-                                        <li><a href="https://maps.app.goo.gl/vFez9nYv5GTeGY9W7" target="_blank">Sede Morada Nova</a><img src="./imagens/three.jpg" alt="imagem"></li>
-                                        <li><a href="https://maps.app.goo.gl/VxeZNqoa5bzDWuzy5" target="_blank">Sede Quixadá</a><img src="./imagens/three.jpg" alt="imagem"></li>
+                                        <li><a href="https://maps.app.goo.gl/1zUZXNbyRHFyJXDZA" target="_blank">Sede Morada Nova</a><img src="./imagens/sedemoradanova.png" alt="imagem"></li>
+                                        <li><a href="https://maps.app.goo.gl/VxeZNqoa5bzDWuzy5" target="_blank">Sede Quixadá</a><img src="./imagens/sedequixada.png" alt="imagem"></li>
                                         <li><a href="#" target="_blank">Sede Russas</a><img src="./imagens/three.jpg" alt="imagem"></li>
-                                        <li><a href="https://maps.app.goo.gl/FRVVf6t7C4cGjvp67" target="_blank">Sede Limoeiro do Norte</a><img src="./imagens/three.jpg" alt="imagem"></li>
+                                        <li><a href="https://maps.app.goo.gl/FRVVf6t7C4cGjvp67" target="_blank">Sede Limoeiro do Norte</a><img src="./imagens/sedelimoeiro.png" alt="imagem"></li>
                                     </ul>
                                 </div>
                         </div>
                         <div class="login-status" id="loginStatus">
-                            <i class="bi bi-person-fill"></i>
-                            <span id="loginText"></span>
-                        </div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16" id="loggedInIcon" style="display: none;">
+                                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+                                <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+                              </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16" id="loggedOutIcon">
+                              <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"/>
+                               </svg>
+                          </div>
                         <div class="bar" id="bar">
                             <i class="bi bi-list"></i>
                         </div>
@@ -156,7 +161,7 @@
                 <h1>Administração</h1>
                 <i class="  bi-globe"> Espaço Restrito</i>
                 <h3>Área dedicada para administradores</h3>
-                <form action="./home/profile.html">
+                <form id="formularioAdmin">
                     <input type="password" name="inputProfile" id="inputProfile" placeholder="Senha de Administrador">
                     <input type="submit" id="btnProfile" value="Entrar">
                 </form>
@@ -261,6 +266,7 @@
         
         <script src="script.js" type="module" async></script>
         <script src="interatividade.js"></script>
+        <script src="admin.js" type="module" async></script>
         <script>
             window.addEventListener('load', () => {
                 if (window.AOS?.init) {

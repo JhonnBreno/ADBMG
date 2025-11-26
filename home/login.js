@@ -1,6 +1,6 @@
 // Importações Firebase Modular SDK
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.5.0/firebase-app.js";
-import { getAuth, signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/12.5.0/firebase-auth.js";
+import { getAuth, GoogleAuthProvider, onAuthStateChanged, sendPasswordResetEmail, signInWithEmailAndPassword, signInWithPopup, signOut } from "https://www.gstatic.com/firebasejs/12.5.0/firebase-auth.js";
 
 // Configuração do Firebase (usar a mesma de profile.js para consistência)
 const firebaseConfig = {
@@ -23,6 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const emailInput = document.getElementById('email');
     const passwordInput = document.getElementById('password');
     const googleBtn = document.getElementById('googleSignIn');
+    const forgotPasswordLink = document.getElementById('forgotPassword');
 
     if (form) {
         form.addEventListener('submit', async (e) => {
@@ -86,6 +87,23 @@ document.addEventListener('DOMContentLoaded', () => {
             } catch (error) {
                 console.error('Erro no login com Google:', error);
                 alert('Erro ao fazer login com Google: ' + (error.message || 'Tente novamente mais tarde'));
+            }
+        });
+    }
+
+    // Lógica para redefinição de senha
+    if (forgotPasswordLink) {
+        forgotPasswordLink.addEventListener('click', async (e) => {
+            e.preventDefault();
+            const email = prompt('Por favor, digite seu email para redefinir a senha:');
+            if (email) {
+                try {
+                    await sendPasswordResetEmail(auth, email);
+                    alert('E-mail de redefinição de senha enviado! Verifique sua caixa de entrada.');
+                } catch (error) {
+                    console.error('Erro ao enviar e-mail de redefinição de senha:', error);
+                    alert('Erro ao enviar e-mail de redefinição de senha: ' + error.message);
+                }
             }
         });
     }

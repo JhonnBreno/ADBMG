@@ -104,6 +104,10 @@ html, body{
     padding-left: 10px;
     outline: none;
 }
+.search svg{
+    width: 15px;
+    margin: 5px;
+}
 .search button{
     position: relative;
     max-width: 30px;
@@ -282,14 +286,13 @@ section .fundo{
 }
 .sidebar .header-style{
     position: relative;
-    width: 30px;
-    height: 30px;
+    width: 20%;
+    height: 100%;
     font-size: 2em;
     font-weight: bold;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.699);
     color: white;
     background-color: var(--color5);
-    border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -317,6 +320,7 @@ section .fundo{
     overflow: hidden;
     z-index: 9999;
     border-bottom: solid 4px var(--color5);
+    gap: 15px;
 }
 .sidebar img{
     width: 100%;
@@ -328,8 +332,11 @@ section .fundo{
     filter: brightness(30%);
 }
 .sidebar ul{
+    width: 100%;
     list-style: none;
     display: flex;
+    align-items: center;
+    justify-content: center;
     gap: 10px;
     margin:0;
     padding: 0;
@@ -356,7 +363,7 @@ section .fundo{
 }
 .lessons{
     position: relative;
-    background-image: linear-gradient(to top,  #000000, rgb(17, 18, 24), var(--color4), var(--color4));
+    background-image: linear-gradient(to top, rgb(20, 59, 60),  var(--color4 ));
     box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.158);
 }
 .lessons .card-body{
@@ -408,7 +415,7 @@ section .fundo{
     width: 100%;
     height: auto;
     position: relative;
-    background-image: linear-gradient(to bottom,  #000000, rgb(17, 18, 24), var(--color4), var(--color4));
+    background-color: gold;
     color: var(--color3);
     display: flex;
     align-items: center;
@@ -428,6 +435,7 @@ section .fundo{
     padding: 10px;
     border-radius: 10px;
     max-width: 400px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.279);
 }
 .admin form{
     display: flex;
@@ -724,7 +732,7 @@ footer .final{
     align-items: center;
     gap: 8px;
     color: white;
-    padding: 2px 10px;
+    padding: 5px 10px;
     border-radius: 5px;
     cursor: pointer;
     transition: 0.3s;
@@ -733,8 +741,8 @@ footer .final{
 .login-status:hover {
     background-color: var(--color5);
 }
-.login-status i {
-    font-size: 20px;
+.login-status svg {
+    width: 20px;
 }
 .login-status.logged-in {
     color: var(--color1);

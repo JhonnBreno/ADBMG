@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
       document.getElementById("nomeMae").value = data.nomeMae || "";
       document.getElementById("funcao").value = data.funcao || "";
       document.getElementById("congregacao").value = data.congregacao || "";
-      document.getElementById("cidade").value = data.cidade || ""; // Adiciona leitura da cidade
+      document.getElementById("cidade").value = data.cidade || ""; // Leitura do valor do select
       if (data.batizado !== undefined) {
         document.getElementById("batizado").value = data.batizado ? "sim" : "nao";
         toggleDataBatismo();

@@ -25,19 +25,21 @@ function isUserLoggedIn() {
 
 // Função para atualizar o visual do status de login
 function updateLoginStatus() {
-    const loginStatus = document.getElementById('loginStatus');
-    const loginText = document.getElementById('loginText');
+    const loginStatusDiv = document.getElementById('loginStatus');
+    const loggedInIcon = document.getElementById('loggedInIcon');
+    const loggedOutIcon = document.getElementById('loggedOutIcon');
     
+    if (!loggedInIcon || !loggedOutIcon) { // Adicionar verificação para os ícones
+        console.warn("Ícones de login não encontrados no DOM.");
+        return; // Sair se os ícones não existirem
+    }
+
     if (isUserLoggedIn()) {
-        loginStatus.classList.add('logged-in');
-        loginText.textContent = 'Logado';
-        const userName = localStorage.getItem('userName');
-        if (userName) {
-            loginText.textContent = userName;
-        }
+        loggedInIcon.style.display = 'block';
+        loggedOutIcon.style.display = 'none';
     } else {
-        loginStatus.classList.remove('logged-in');
-        loginText.textContent = 'Não logado';
+        loggedInIcon.style.display = 'none';
+        loggedOutIcon.style.display = 'block';
     }
 }
 

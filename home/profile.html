@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <titlePerfil - ADBMG</title>
+    <title> Perfil - ADBMG</title>
     <link rel="stylesheet" href="profile.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="shortcut icon" href="../imagens/favicon-adbmg.png" type="image/x-icon">
@@ -54,7 +54,13 @@
                 </div>
                 
                 <input type="text" id="congregacao" placeholder="Congregação" required />
-                <input type="text" id="cidade" placeholder="Cidade" required />
+                <select id="cidade" required>
+                    <option value="" disabled selected>Selecione a Cidade</option>
+                    <option value="Quixeramobim">Quixeramobim</option>
+                    <option value="Morada Nova">Morada Nova</option>
+                    <option value="Russas">Russas</option>
+                    <option value="Limoeiro do Norte">Limoeiro do Norte</option>
+                </select>
                 
                 <button type="submit">Salvar Perfil</button>
             </form>
